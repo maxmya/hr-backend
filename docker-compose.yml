@@ -1,0 +1,33 @@
+version: "3.7"
+
+services:
+
+  Postgresql:
+    image: postgres:alpine
+    container_name: hr-backend-db
+    expose:
+      - "5432"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: ravenclaw
+      POSTGRES_USER: dumbledore
+      POSTGRES_PASSWORD: firestorm
+    networks:
+      - default-network
+
+  hr-backend:
+    container_name: hr-backend
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - Postgresql
+    networks:
+      - default-network
+
+networks:
+  default-network:
+    driver: bridge

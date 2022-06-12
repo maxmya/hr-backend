@@ -1,0 +1,13 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+  application:
+    name: hr-backend
+  datasource:
+    url: jdbc:postgresql://Postgresql:5432/ravenclaw
+    username: dumbledore
+    password: firestorm
