@@ -1,5 +1,10 @@
 # HR APIS - Simple 💻
 
+
+Simple Hr Backend , to create and update employee state according to state machien 
+Used Tech : Spring Boot , Java 11 , gradle , Hexagonal Architecture
+
+
 ## 🤖 Build Project
 
 ---
